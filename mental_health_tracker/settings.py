@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "muhammad-rizky36-mentalhealthtracker.pbp.cs.ui.ac.id"]
 
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://muhammad-rizky36-mentalhealthtracker.pbp.cs.ui.ac.id", "https://muhammad-rizky36-mentalhealthtracker.pbp.cs.ui.ac.id"]
+
 
 # Application definition
 
