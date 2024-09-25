@@ -30,6 +30,14 @@
     <td>{{mood_entry.time}}</td>
     <td>{{mood_entry.feelings}}</td>
     <td>{{mood_entry.mood_intensity}}</td>
+    <td>
+      <a href="{% url 'main:edit_mood' mood_entry.pk %}">
+          <button>
+              Edit
+          </button>
+      </a>
+  </td>
+</tr>
   </tr>
   {% endfor %}
 </table>
