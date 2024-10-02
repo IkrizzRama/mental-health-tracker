@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block meta %}
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
 <title>Mental Health Tracker</title>
 {% endblock meta %}
 {% block content %}
@@ -113,6 +114,8 @@
     else {
         classNameString = "columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 w-full"
         moodEntries.forEach((item) => {
+          const mood = DOMPurify.sanitize(item.fields.mood);
+          const feelings = DOMPurify.sanitize(item.fields.feelings);
             htmlString += `
             <div class="relative break-inside-avoid">
                 <div class="absolute top-2 z-10 left-1/2 -translate-x-1/2 flex items-center -space-x-2">
